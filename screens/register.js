@@ -15,9 +15,10 @@ const register = ({ navigation }) => {
       .createUserWithEmailAndPassword(email, passw)
       .then((authUser) => {
         authUser.user.updateProfile({
-          display: name,
-          photoURL: imgUrl,
+          displayName: 'John Doe', // Update display name
+          photoURL: 'https://cdn-icons-png.flaticon.com/128/149/149071.png', // Update photo URL
         });
+        console.log(authUser.user.photoURL);
 
         navigation.replace('login');
       })

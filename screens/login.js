@@ -11,13 +11,24 @@ const login = ({ navigation }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        navigation.replace('Home');
+        navigation.replace('Home', {
+          img: auth.currentUser.photoURL,
+          teste: 'fffff',
+        });
       }
     });
     return unsubscribe;
   }, []);
   const onclicking = () => {
     navigation.navigate('register');
+  };
+  const loginn = () => {
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then(navigation.replace('login'))
+      .catch((erreur) => {
+        alert(erreur);
+      });
   };
   return (
     <KeyboardAvoidingView
@@ -62,7 +73,7 @@ const login = ({ navigation }) => {
       </View>
       <View className="">
         <View className="w-40">
-          <Button title="login" className="w-40" />
+          <Button title="login" className="w-40" onPress={loginn} />
         </View>
         <View className="w-40 mt-5">
           <Button

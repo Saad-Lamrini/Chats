@@ -23,13 +23,20 @@ export default function App() {
         <Stack.Screen
           name="Register"
           component={register}
-          options={{ headerTitleAlign: 'center', headerBackTitle: 'djdj' }}
+          options={{
+            headerTitleAlign: 'center',
+            headerBackTitle: 'djdj',
+          }}
           //options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Home"
           component={home}
-          options={{ headerTitleAlign: 'center', headerBackTitle: 'djdj' }}
+          // options={{
+          //   headerTitleAlign: 'center',
+          //   headerBackTitle: 'djdj',
+          //   //
+          // }}
           //options={{ headerShown: false }}
         />
       </Stack.Navigator>

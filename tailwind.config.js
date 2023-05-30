@@ -5,6 +5,9 @@ module.exports = {
     './<custom directory>/**/*.{js,jsx,ts,tsx}',
     './screens/**/*.{js,jsx,ts,tsx}',
     './screens/login.js',
+    './components/**/*.{js,jsx,ts,tsx}',
+    './components/<custom directory>/**/*.{js,jsx,ts,tsx}',
+    './components/CustomListItem.js',
   ],
   theme: {
     extend: {},
