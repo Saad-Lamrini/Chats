@@ -9,11 +9,22 @@ import { createStackNavigator } from '@react-navigation/stack';
 import login from './screens/login';
 import home from './screens/home';
 import register from './screens/register';
+import Progress from './screens/Progress';
 const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="alten"
+          component={Progress}
+          // options={{
+          //   headerTitleAlign: 'center',
+          //   headerBackTitle: 'djdj',
+          //   //
+          // }}
+          //options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="login"
           component={login}
